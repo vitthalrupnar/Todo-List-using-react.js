@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  display: grid;
+  place-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2{
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+.todo-body{
+  margin-top: 3rem;
+  background-color: rgb(245, 232, 232);
+  max-width: 80vw;
+  border: 1px solid rgb(163, 163, 163);
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 4rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px 5px rgb(165, 165, 165);
+}
+
+.input-field{
+  display: flex;
+  padding: 2rem;
+}
+.input-field  .input{
+  width: 40vw;
+  box-sizing: border-box;
+  min-height: 2.5rem;
+  height: 100%;
+  font-size: 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.988);
+  padding: 0 15px 0 15px;
+  color: black;
+  border: 1px solid rgb(181, 181, 181);
+  border-radius: 30px 0 0 30px;
+}
+.input-field  .add{
+  height: 40px;
+  font-size: 20px;
+  background-color: rgb(0, 195, 255);
   color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+*:focus {
+  outline: none;
+}
+.showItems .each-item{
+  display: flex;
+  height: 5vh;
+  justify-content: space-between;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 5px;
+  background-color: rgb(232, 232, 232);  
+}
+.showItems{
+  /* border: 2px solid black; */
+  overflow-y: auto;
+  width: 40vw;
+  height: 40vh;
+  box-sizing: content-box;
+}
+.each-item h3,i{
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  align-self: center;
+  padding: 0 10px;
+}
+.each-item i{
+  color: red;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button button{
+  cursor: pointer;
 }
